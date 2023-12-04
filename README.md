@@ -178,17 +178,3 @@ This will create a NeRF with the `NeuralRadianceField` class in `implicit.py`, a
 Feel free to modify the experimental settings in `configs/nerf_lego.yaml` --- though the current settings should allow you to train a NeRF on low-resolution inputs in a reasonable amount of time. After training, a spiral rendering will be written to `images/part_3.gif`. Report your results. It should look something like this:
 
 ![Spiral Rendering of Part 3](ta_images/part_3.gif)
-
-##  4. NeRF Extras (***Choose at least one!*** More than one is extra credit)
-
-###  4.1 View Dependence (10 pts)
-
-Add view dependence to your NeRF model! Specifically, make it so that emission can vary with viewing direction. You can NeRF or other papers for how to do this effectively --- if you're not careful, your network may overfit to the training images. Discuss the trade-offs between increased view dependence and generalization quality.
-
-###  4.2 Hierarchical Sampling (10 pts)
-
-NeRF employs two networks: a coarse network and a fine network. During the coarse pass, it uses the coarse network to get an estimate of geometry geometry, and during fine pass uses these geometry estimates for better point sampling for the fine network. Implement this hierarchical point-sampling strategy and discuss trade-offs (speed / quality).
-
-###  4.3 High Resolution Imagery (10 pts)
-
-Run NeRF on high-res imagery using the `nerf_lego_highres.yaml` config file. This will take a long time to train -- play around with some hyper parameters (point samples per ray, network capacity) and report your results
