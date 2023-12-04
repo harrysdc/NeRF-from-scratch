@@ -1,3 +1,6 @@
+Assignment 3
+===================================
+
 # A. Theory 
 ## Transmittance Calculation (10 points)
 Transmittance calculation is a core part for the implementation of volume rendering. Your first task is to compute the transmittance of a ray going through a non-homogeneous medium (shown in the image below).   
