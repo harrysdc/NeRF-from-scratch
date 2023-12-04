@@ -1,38 +1,3 @@
-Assignment 3
-===================================
-
-# A. Theory 
-## Transmittance Calculation (10 points)
-Transmittance calculation is a core part for the implementation of volume rendering. Your first task is to compute the transmittance of a ray going through a non-homogeneous medium (shown in the image below).   
-Please compute the transmittace in `transmittance_calculation/a3_transmittance.pdf` and submit the result along with your code for part B to canvas. You can either hand write the result or edit the tex file, as long as it is readable by the TAs.
-
-![Transmittance computation](transmittance_calculation/figure1.png)
-
-
-# B. Implementation
-
-##  0. Setup
-
-### 0.1 Environment setup
-You can use the python environment you've set up for past assignments, or re-install it with our `environment.yml` file:
-
-```bash
-conda env create -f environment.yml
-conda activate l3d
-```
-
-If you do not have Anaconda, you can quickly download it [here](https://docs.conda.io/en/latest/miniconda.html), or via the command line in with:
-
-```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-chmod +x Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh
-```
-
-### 0.2 Data
-
-The data for this assignment is provided in the github repo under `data/`. You do not need to download anything yourself.
-
 ##  1. Differentiable Volume Rendering
 
 In the emission-absorption (EA) model that we covered in class, volumes are described by their *appearance* (e.g. emission) and *geometry* (absorption) at *every point* in 3D space. For part 1 of the assignment, you will implement a ***Differentiable Renderer*** for EA volumes, which you will use in parts 2 and 3. Differentiable renderers are extremely useful for 3D learning problems --- one reason is because they allow you to optimize scene parameters (i.e. perform inverse rendering) from image supervision only!
